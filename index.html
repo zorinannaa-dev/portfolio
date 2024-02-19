@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Frontend developer</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/animation.css" />
+    <link rel="stylesheet" href="./styles/themes.css" />
+    <link rel="icon" href="./favicons/favicon.ico" sizes="any" />
+    <link rel="icon" href="./favicons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./favicons/favicon.png" />
+    <script src="./scripts/set-theme.js"></script>
+  </head>
+  <body class="page">
+    <header class="header header__line">
+      <nav class="nav header__nav">
+        <ul class="nav__item-list">
+          <li class="nav__item">
+            <a class="link" href="/index.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="logo-icon"
+              >
+                <path
+                  d="M16 3.383 15.076 3 7.779 20.617l.924.383L16 3.383zM16.287 7l6.153 4.825L16.267 17l.678.737L24 11.825l-7.048-5.578-.665.753zM7.809 7 1.56 11.825 7.563 17l-.679.737L0 11.825l7.144-5.578.665.753z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="nav__item">
+            <button class="theme-menu__button" data-theme="light">
+              светлая
+            </button>
+            <button class="theme-menu__button" data-theme="dark" disabled>
+              тёмная
+            </button>
+            <button class="theme-menu__button" data-theme="auto" disabled>
+              авто
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <section class="header__box">
+        <div class="header__box__container">
+          <span class="container__welcome">Привет, меня зовут</span>
+          <h1 class="container__name">Зорина Анна</h1>
+          <button type="button" class="button header__box__button">→</button>
+          <p class="container__description">Front-end Developer</p>
+        </div>
+        <div class="header__box__image">
+          <img
+            src="./images/main-photo.png"
+            alt="это моя фотография"
+            class="main-image"
+          />
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <h2>Инструменты</h2>
+      <h2>Проекты</h2>
+      <h2>Связаться со мной</h2>
+    </main>
+    <footer>
+      здесь будет ссылка на соцсети
+    </footer>
+  </body>
+</html>

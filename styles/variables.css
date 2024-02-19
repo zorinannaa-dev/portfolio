@@ -1,0 +1,20 @@
+:root {
+  /* fonts  */
+  --main-title: "Xenotroncyrillic";
+  --text-font: "Champagne & Limousines";
+
+  /* main colors  */
+  --background-color: #4E5C5C;
+  --font-color: #fff;
+  --button-color: #9c745d;
+
+  /* accent colors  */
+  --accent-color: #fff;
+  --font-color-pointer: #fff;
+  --button-shadow-color: #47413D;
+
+  /* gradients */
+  --gradient-first-image: linear-gradient(to bottom, #fff 0%, #47413d 100%),
+    radial-gradient(at top center, #fff 0%, #47413d 120%) #989898;
+  --gradient-second-image: linear-gradient(140deg, #5D9C9C, #C3CFD8);
+}

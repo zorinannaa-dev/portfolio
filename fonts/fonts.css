@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Xenotroncyrillic";
+  src: url("../fonts/Xenotroncyrillic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Champagne & Limousines";
+  src: url("../fonts/champagne_limousines.eot");
+  src: url("../fonts/champagne_limousines.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/champagne_limousines.woff2") format("woff2"),
+    url("../fonts/champagne_limousines.woff") format("woff"),
+    url("../fonts/champagne_limousines.ttf") format("truetype"),
+    url("../fonts/champagne_limousines.svg#champagne_limousines") format("svg");
+}

@@ -1,0 +1,157 @@
+.page {
+  max-width: 1440px;
+  background-color: var(--background-color);
+  font-family: var(--text-font), "Courier New", monospace;
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--font-color);
+  padding: 20px;
+}
+
+.header {
+  margin: 0 auto;
+  display: flex;
+  gap: clamp(1.25rem, -0.5106rem + 7.5117vw, 6.25rem);
+  flex-direction: column;
+  height: 100vh;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.nav__item-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-inline-start: 0px;
+}
+
+.logo-icon {
+  width: 30px;
+  transform: scale(1);
+}
+
+.nav__item {
+  list-style-type: none;
+}
+
+.theme-menu__button {
+  position: relative;
+  background-color: transparent;
+  font-family: inherit;
+  border: none;
+  font-size: 20px;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
+.theme-menu__button:after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  color: var(--accent-color);
+  bottom: 0;
+  left: 4px;
+  border-bottom: 1px solid currentColor;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+}
+
+.theme-menu__button:focus-visible,
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.header__box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: clamp(1.25rem, -0.5106rem + 7.5117vw, 6.25rem);
+}
+
+.header__box__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container__welcome {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.container__description {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  margin-block-start: 15px;
+}
+
+.header__box__image {
+  position: relative;
+  width: clamp(15.625rem, -0.8803rem + 70.4225vw, 62.5rem);
+}
+
+.header__box__image::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 3px;
+  width: 100%;
+  background: var(--gradient-first-image);
+  background-blend-mode: multiply, multiply;
+  top: 0;
+  left: 500px;
+  opacity: 0;
+}
+
+.header__box__image::after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  top: 15%;
+  right: 50%;
+  width: 70%;
+  height: 70%;
+  background: var(--gradient-second-image);
+  background-blend-mode: multiply, multiply;
+}
+
+.main-image {
+  width: 100%;
+}
+
+.container__name {
+  font-family: var(--main-title), "Courier New", monospace;
+  font-size: clamp(3.0625rem, 1.2799rem + 7.6056vw, 8.125rem);
+  margin: 0;
+}
+
+.header__box__button {
+  background-color: var(--button-color);
+  border: 1px solid var(--button-color);
+  color: var(--font-color-pointer);
+  margin-block-start: 20px;
+  padding: 2%;
+  width: 15%;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+/* media  */
+@media (width < 1024px) {
+  .header__box {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .header__box__image::after {
+    right: 40%;
+  }
+}

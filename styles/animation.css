@@ -1,0 +1,86 @@
+.theme-menu__button:hover::after,
+.theme-menu__button:focus-visible::after {
+  animation: make-border-menu-button 0.3s ease forwards;
+}
+
+.logo-icon:hover,
+.logo-icon:focus-visible {
+  animation: make-logo-bigger 0.3s ease forwards;
+}
+
+.header__box__button:hover,
+.header__box__button:focus-visible {
+  box-shadow: 2px 2px var(--button-shadow-color);
+  animation: make-logo-button-bigger 0.3s ease forwards;
+}
+
+.header__box__image::before {
+  animation: show-me-square 3s ease 1 forwards;
+}
+
+.header__box__image::after {
+  animation: show-me-second-square 3s ease 1 forwards;
+}
+
+.header__box__container {  
+  animation: show-me-my-name 3s ease 1 forwards;
+}
+
+/* keyframes  */
+@keyframes make-border-menu-button {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes make-logo-bigger {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes make-logo-button-bigger {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes show-me-square {
+  from {
+    left: 500px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes show-me-second-square {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes show-me-my-name {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

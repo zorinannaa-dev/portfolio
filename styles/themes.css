@@ -1,0 +1,34 @@
+:root.theme-dark {
+  /* --background-color: #4E5C5C; */
+  --background-color: #293133;
+  --font-color: #fff;
+  --gradient-first-image: linear-gradient(to bottom, #fff 0%, #47413d 100%),
+    radial-gradient(at top center, #fff 0%, #47413d 120%) #989898;
+  --gradient-second-image: linear-gradient(140deg, #5d9c9c, #c3cfd8);
+  --accent-color: #fff;
+  --font-color-pointer: #fff;
+}
+
+:root.theme-light {
+  --background-color: #fff;
+  --font-color: #505050;
+  --gradient-first-image: linear-gradient(to bottom, #D58787 0%, #802626 100%),
+    radial-gradient(at top center, #D58787 0%, #802626 120%);
+  --gradient-second-image: linear-gradient(140deg, #3D9957, #7ACC91);
+  --accent-color: #505050;
+  --button-color: #BF6969;
+  --font-color-pointer: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+:root {
+  --background-color: #fff;
+  --font-color: #505050;
+  --gradient-first-image: linear-gradient(to bottom, #D58787 0%, #802626 100%),
+    radial-gradient(at top center, #D58787 0%, #802626 120%);
+  --gradient-second-image: linear-gradient(140deg, #3D9957, #7ACC91);
+  --accent-color: #505050;
+  --button-color: #BF6969;
+  --font-color-pointer: #fff;
+}
+}
