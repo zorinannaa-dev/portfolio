@@ -11,7 +11,7 @@
 .header__box__button:hover,
 .header__box__button:focus-visible {
   box-shadow: 2px 2px var(--button-shadow-color);
-  animation: make-logo-button-bigger 0.3s ease forwards;
+  animation: make-logo-button-bigger 0.5s ease infinite alternate;
 }
 
 .header__box__image::before {
@@ -22,8 +22,12 @@
   animation: show-me-second-square 3s ease 1 forwards;
 }
 
-.header__box__container {  
+.header__box__container {
   animation: show-me-my-name 3s ease 1 forwards;
+}
+
+.contact__list__item:hover {
+  animation: loading infinite 1.5s linear;
 }
 
 /* keyframes  */
@@ -82,5 +86,14 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes loading {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
   }
 }

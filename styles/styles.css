@@ -13,7 +13,6 @@
   display: flex;
   gap: clamp(1.25rem, -0.5106rem + 7.5117vw, 6.25rem);
   flex-direction: column;
-  height: 100vh;
 }
 
 .link {
@@ -23,6 +22,8 @@
 
 .button {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .nav__item-list {
@@ -131,7 +132,7 @@
 
 .container__name {
   font-family: var(--main-title), "Courier New", monospace;
-  font-size: clamp(3.0625rem, 1.2799rem + 7.6056vw, 8.125rem);
+  font-size: clamp(3.125rem, 1.3193rem + 7.7042vw, 6.25rem);
   margin: 0;
 }
 
@@ -145,13 +146,209 @@
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
+/* dialog header  */
+.header__dialog {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dialog-bg);
+  color: var(--dialog-font-color);
+  width: clamp(15.625rem, 1.3204rem + 61.0329vw, 56.25rem);
+  padding: 60px;
+}
+
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.dialog__about__arcticle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+  margin-block-start: 20px;
+}
+
+.dialog__about__title {
+  font-family: var(--main-title);
+  font-size: clamp(1.25rem, 0.9199rem + 1.4085vw, 2.1875rem);
+  align-self: center;
+}
+
+.dialog__about__subtitle {
+  opacity: 0.3;
+  font-size: 14px;
+}
+
+.dialog__about__paragraph {
+  font-size: clamp(0.9375rem, 0.7835rem + 0.6573vw, 1.375rem);
+  line-height: 1.3;
+  letter-spacing: 3px;
+}
+
+.dialog__cross {
+  width: 40px;
+  height: 100%;
+}
+
+.accent-word {
+  color: var(--accent-word-color);
+  text-shadow: -1px 0 #802626, 0 1px #802626, 1px 0 #802626, 0 -1px #802626;
+}
+
+/* main  */
+.main {
+  margin-block-start: 40px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-block-start: 100px;
+}
+
+.section__title {
+  font-family: var(--main-title);
+  font-size: clamp(1.875rem, 1.2148rem + 2.8169vw, 3.75rem);
+}
+
+.tools__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "html . css"
+    ". js .";
+}
+
+.tool__title {
+  font-size: clamp(1.25rem, 0.8099rem + 1.8779vw, 2.5rem);
+  text-align: center;
+}
+
+.tools__item {
+  width: clamp(12.5rem, 9.1989rem + 14.0845vw, 21.875rem);
+}
+
+.tools-image {
+  height: 100%;
+  margin-block-start: 20px;
+}
+
+.tools__image-js {
+  height: 90%;
+}
+
+.html__tool {
+  grid-area: html;
+}
+
+.css__tool {
+  grid-area: css;
+}
+
+.javascript__tool {
+  grid-area: js;
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.contact__list__item {
+  position: relative;
+  width: 250px;
+  border: 15px solid var(--accent-color);
+  border-block-end-color: var(--button-color);
+  border-radius: 50%;
+  height: 250px;
+}
+
+.item__title {
+  position: absolute;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  inset: 85px auto 50px auto;
+}
+
+/* supports  */
+@supports ((text-stroke: 1px #802626) or (-webkit-text-stroke: 1px #802626)) {
+  .accent-word {
+    -webkit-text-stroke: 1px #802626;
+    text-stroke: 1px #802626;
+    text-shadow: none;
+  }
+}
+
 /* media  */
 @media (width < 1024px) {
+  .header__box__image {
+    width: clamp(12.5rem, 7.083rem + 23.1125vw, 21.875rem);
+  }
+
   .header__box {
     flex-direction: column;
     gap: 50px;
   }
+
   .header__box__image::after {
     right: 40%;
+  }
+
+  .tools__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact__list {
+    flex-direction: row;
+  }
+}
+
+@media (width < 768px) {
+  .header__box__image {
+    width: clamp(12.5rem, 7.083rem + 23.1125vw, 21.875rem);
+  }
+
+  .header__box {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .header__box__image::after {
+    right: 40%;
+  }
+
+  .tools__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact__list {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
   }
 }

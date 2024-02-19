@@ -4,17 +4,23 @@
   --text-font: "Champagne & Limousines";
 
   /* main colors  */
-  --background-color: #4E5C5C;
+  --background-color: #293133;
   --font-color: #fff;
   --button-color: #9c745d;
+
+  /* dialog colors  */
+  --dialog-bg: #545138;
+  --dialog-font-color: #fff;
+  --accent-word-color: #BF6969;
+  --accent-word-shadow: #802626;
 
   /* accent colors  */
   --accent-color: #fff;
   --font-color-pointer: #fff;
-  --button-shadow-color: #47413D;
+  --button-shadow-color: #47413d;
 
   /* gradients */
   --gradient-first-image: linear-gradient(to bottom, #fff 0%, #47413d 100%),
     radial-gradient(at top center, #fff 0%, #47413d 120%) #989898;
-  --gradient-second-image: linear-gradient(140deg, #5D9C9C, #C3CFD8);
+  --gradient-second-image: linear-gradient(140deg, #5d9c9c, #c3cfd8);
 }
