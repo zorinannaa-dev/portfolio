@@ -18,6 +18,7 @@
   --accent-color: #fff;
   --font-color-pointer: #fff;
   --button-shadow-color: #47413d;
+  --focus-visible-color: #5D9C9C;
 
   /* gradients */
   --gradient-first-image: linear-gradient(to bottom, #fff 0%, #47413d 100%),

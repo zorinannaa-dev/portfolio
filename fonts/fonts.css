@@ -3,6 +3,7 @@
   src: url("../fonts/Xenotroncyrillic.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -14,4 +15,5 @@
     url("../fonts/champagne_limousines.woff") format("woff"),
     url("../fonts/champagne_limousines.ttf") format("truetype"),
     url("../fonts/champagne_limousines.svg#champagne_limousines") format("svg");
+  font-display: swap;
 }

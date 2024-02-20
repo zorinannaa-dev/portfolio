@@ -3,15 +3,22 @@
   animation: make-border-menu-button 0.3s ease forwards;
 }
 
+.theme-menu__button:disabled:hover::after {
+  animation: none;
+}
+
 .logo-icon:hover,
 .logo-icon:focus-visible {
   animation: make-logo-bigger 0.3s ease forwards;
 }
 
-.header__box__button:hover,
-.header__box__button:focus-visible {
-  box-shadow: 2px 2px var(--button-shadow-color);
+.header__box__button:hover {
+  box-shadow: 3px 3px var(--button-shadow-color);
   animation: make-logo-button-bigger 0.5s ease infinite alternate;
+}
+
+.dialog__cross:hover {
+  animation: cross-button-moves 0.5s linear 1 alternate;
 }
 
 .header__box__image::before {
@@ -26,8 +33,18 @@
   animation: show-me-my-name 3s ease 1 forwards;
 }
 
-.contact__list__item:hover {
-  animation: loading infinite 1.5s linear;
+.contact__list__item:hover::after {
+  opacity: 1;
+  background-color: var(--button-color);
+  transition: opacity .5s linear;
+  animation: anim-border 5s linear infinite;
+}
+
+.link__contact:focus-visible {
+  border-radius: 50%;
+  outline: 2px solid var(--focus-visible-color);
+  outline-offset: -35px;
+  animation: make-contact-bigger 0.2s linear 1 forwards;
 }
 
 /* keyframes  */
@@ -89,12 +106,38 @@
   }
 }
 
-@keyframes loading {
-  0% {
-    rotate: 0deg;
+@keyframes cross-button-moves {
+  from {
+    transform: rotateX(0);
   }
-  100% {
-    rotate: 360deg;
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes anim-border {
+  from {
+    top: 25px;
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 0px;
+    bottom: 20px;
+  }
+  to {
+    top: 25px;
+    bottom: 0;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes make-contact-bigger {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
   }
 }
 

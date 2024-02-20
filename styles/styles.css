@@ -1,8 +1,5 @@
 /* TO DO  */
-/* нужно прописать фокус и фокус визибл
-сделать крестик в дайлог интерактивным 
-сделать вращения у лого инструментов */
-
+/* добавить интерактивности кнопке обо мне */
 .page {
   max-width: 1440px;
   background-color: var(--background-color);
@@ -42,6 +39,22 @@
 .logo-icon {
   width: 30px;
   transform: scale(1);
+  border: 1px solid transparent;
+}
+
+.link__logo:focus,
+.link__logo:focus-visible,
+.button:focus-visible,
+.button:focus,
+.link:focus,
+.link:focus-visible {
+  outline: none;
+}
+
+.link__logo:focus-visible .logo-icon,
+.cross-button:focus-visible  {
+  border: 1px solid var(--focus-visible-color);
+  transition: border 0.3s ease;
 }
 
 .nav__item {
@@ -66,7 +79,7 @@
   content: "";
   position: absolute;
   width: 90%;
-  color: var(--accent-color);
+  color: var(--focus-visible-color);
   bottom: 0;
   left: 4px;
   border-bottom: 1px solid currentColor;
@@ -74,9 +87,10 @@
   transform-origin: 0 0;
 }
 
-.theme-menu__button:focus-visible,
-.theme-menu__button:focus {
-  outline: none;
+.theme-menu__button:focus-visible {
+  color: var(--focus-visible-color);
+  transform-origin: 0 0;
+  transition: color 0.3s ease;
 }
 
 .header__box {
@@ -133,6 +147,7 @@
 
 .main-image {
   width: 100%;
+  height: 100%;
 }
 
 .container__name {
@@ -143,12 +158,17 @@
 
 .header__box__button {
   background-color: var(--button-color);
-  border: 1px solid var(--button-color);
+  border: 3px solid var(--button-color);
   color: var(--font-color-pointer);
   margin-block-start: 20px;
   padding: 2%;
   width: 15%;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.header__box__button:focus-visible {
+  border: 3px solid var(--focus-visible-color);
+  transition: border 0.3s ease;
 }
 
 /* dialog header  */
@@ -206,6 +226,10 @@ dialog::backdrop {
 .dialog__cross {
   width: 40px;
   height: 100%;
+}
+
+.cross-button {
+  border: 1px solid transparent;
 }
 
 .accent-word {
@@ -281,19 +305,43 @@ dialog::backdrop {
 .contact__list__item {
   position: relative;
   width: 250px;
-  border: 15px solid var(--accent-color);
-  border-block-end-color: var(--button-color);
-  border-radius: 50%;
   height: 250px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+}
+
+.contact__list__item::before,
+.contact__list__item::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  z-index: -1;
+  margin: -2%;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.contact__list__item::after {
+  opacity: 0;
 }
 
 .item__title {
   position: absolute;
   font-size: 30px;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link__contact {
+  display: inline-block;
   width: 100%;
   height: 100%;
-  inset: 85px auto 50px auto;
+  border: 2px solid transparent;
 }
 
 /* supports  */

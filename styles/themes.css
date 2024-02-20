@@ -12,6 +12,7 @@
   --dialog-font-color: #fff;
   --accent-word-color: #BF6969;
   --accent-word-shadow: #802626;
+  --focus-visible-color: #5D9C9C;
 }
 
 :root.theme-light {
@@ -27,6 +28,7 @@
   --dialog-font-color: #fff;
   --accent-word-color: #BF6969;
   --accent-word-shadow: #802626;
+  --focus-visible-color: #1D9074;
 }
 
 @media (prefers-color-scheme: light) {
@@ -43,5 +45,6 @@
   --dialog-font-color: #fff;
   --accent-word-color: #BF6969;
   --accent-word-shadow: #802626;
+  --focus-visible-color: #1D9074;
 }
 }
