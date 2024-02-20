@@ -97,3 +97,14 @@
     rotate: 360deg;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .header__box__button:hover,
+  .header__box__button:focus-visible,
+  .header__box__image::before,
+  .header__box__image::after,
+  .header__box__container,
+  .contact__list__item:hover {
+    animation: none;
+  }
+}
