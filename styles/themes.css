@@ -1,5 +1,4 @@
 :root.theme-dark {
-  /* --background-color: #4E5C5C; */
   --background-color: #293133;
   --font-color: #fff;
   --gradient-first-image: linear-gradient(to bottom, #fff 0%, #47413d 100%),
@@ -7,44 +6,47 @@
   --gradient-second-image: linear-gradient(140deg, #5d9c9c, #c3cfd8);
   --accent-color: #fff;
   --button-color: #9c745d;
+  --button-effect: #80d6d6;
   --font-color-pointer: #fff;
   --dialog-bg: #545138;
   --dialog-font-color: #fff;
-  --accent-word-color: #BF6969;
+  --accent-word-color: #bf6969;
   --accent-word-shadow: #802626;
-  --focus-visible-color: #5D9C9C;
+  --focus-visible-color: #5d9c9c;
 }
 
 :root.theme-light {
   --background-color: #fff;
   --font-color: #505050;
-  --gradient-first-image: linear-gradient(to bottom, #D58787 0%, #802626 100%),
-    radial-gradient(at top center, #D58787 0%, #802626 120%);
-  --gradient-second-image: linear-gradient(140deg, #3D9957, #7ACC91);
+  --gradient-first-image: linear-gradient(to bottom, #d58787 0%, #802626 100%),
+    radial-gradient(at top center, #d58787 0%, #802626 120%);
+  --gradient-second-image: linear-gradient(140deg, #3d9957, #7acc91);
   --accent-color: #505050;
-  --button-color: #BF6969;
+  --button-color: #bf6969;
+  --button-effect: #80d6d6;
   --font-color-pointer: #fff;
   --dialog-bg: #545138;
   --dialog-font-color: #fff;
-  --accent-word-color: #BF6969;
+  --accent-word-color: #bf6969;
   --accent-word-shadow: #802626;
-  --focus-visible-color: #1D9074;
+  --focus-visible-color: #1d9074;
 }
 
 @media (prefers-color-scheme: light) {
-:root {
-  --background-color: #fff;
-  --font-color: #505050;
-  --gradient-first-image: linear-gradient(to bottom, #D58787 0%, #802626 100%),
-    radial-gradient(at top center, #D58787 0%, #802626 120%);
-  --gradient-second-image: linear-gradient(140deg, #3D9957, #7ACC91);
-  --accent-color: #505050;
-  --button-color: #BF6969;
-  --font-color-pointer: #fff;
-  --dialog-bg: #545138;
-  --dialog-font-color: #fff;
-  --accent-word-color: #BF6969;
-  --accent-word-shadow: #802626;
-  --focus-visible-color: #1D9074;
-}
+  :root {
+    --background-color: #fff;
+    --font-color: #505050;
+    --gradient-first-image: linear-gradient(to bottom, #d58787 0%, #802626 100%),
+      radial-gradient(at top center, #d58787 0%, #802626 120%);
+    --gradient-second-image: linear-gradient(140deg, #3d9957, #7acc91);
+    --accent-color: #505050;
+    --button-color: #bf6969;
+    --button-effect: #80d6d6;
+    --font-color-pointer: #fff;
+    --dialog-bg: #545138;
+    --dialog-font-color: #fff;
+    --accent-word-color: #bf6969;
+    --accent-word-shadow: #802626;
+    --focus-visible-color: #1d9074;
+  }
 }

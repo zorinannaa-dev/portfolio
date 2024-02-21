@@ -1,5 +1,6 @@
 /* TO DO  */
 /* добавить интерактивности кнопке обо мне */
+
 .page {
   max-width: 1440px;
   background-color: var(--background-color);
@@ -52,7 +53,7 @@
 }
 
 .link__logo:focus-visible .logo-icon,
-.cross-button:focus-visible  {
+.cross-button:focus-visible {
   border: 1px solid var(--focus-visible-color);
   transition: border 0.3s ease;
 }
@@ -157,6 +158,7 @@
 }
 
 .header__box__button {
+  position: relative;
   background-color: var(--button-color);
   border: 3px solid var(--button-color);
   color: var(--font-color-pointer);
@@ -164,6 +166,19 @@
   padding: 2%;
   width: 15%;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  overflow: hidden;
+
+}
+
+.header__box__button::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: var(--button-effect);
+  top: 0;
+  opacity: 0;
+  
 }
 
 .header__box__button:focus-visible {
